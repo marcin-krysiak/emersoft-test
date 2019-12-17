@@ -1,0 +1,42 @@
+[
+  {
+    "title": "A very important document",
+    "date": "01/01/2018",
+    "type": "document"
+  },
+  {
+    "title": "Some video",
+    "date": "03/12/2013",
+    "type": "video"
+  },
+  {
+    "title": "Interesting photo",
+    "date": "12/07/2019",
+    "type": "image"
+  },
+  {
+    "title": "A good piece of music",
+    "date": "05/30/2014",
+    "type": "audio"
+  },
+  {
+    "title": "This is interactive video",
+    "date": "02/01/2018",
+    "type": "interactive video"
+  },
+  {
+    "title": "Another video",
+    "date": "01/01/2015",
+    "type": "video"
+  },
+  {
+    "title": "And one more video",
+    "date": "01/01/2018",
+    "type": "video"
+  },
+  {
+    "title": "Some other document",
+    "date": "01/01/2016",
+    "type": "document"
+  }
+]

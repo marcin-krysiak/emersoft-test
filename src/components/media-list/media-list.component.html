@@ -1,0 +1,51 @@
+<form [formGroup]="mediaListForm">
+  <mat-toolbar color="primary" class="auto-height">
+    <mat-form-field class="search-bar">
+      <input
+        matInput
+        type="search"
+        placeholder="Search by title, keyword or file type"
+        formControlName="searchString"
+      />
+      <mat-icon>search</mat-icon>
+    </mat-form-field>
+  </mat-toolbar>
+  <mat-toolbar class="auto-height">
+    <mat-form-field>
+      <mat-label>Filter by</mat-label>
+      <mat-select formControlName="filter">
+        <mat-option value="">All media</mat-option>
+        <mat-option value="video">Videos</mat-option>
+        <mat-option value="interactive video">Interactive videos</mat-option>
+        <mat-option value="audio">Audio</mat-option>
+        <mat-option value="image">Images</mat-option>
+        <mat-option value="document">Documents</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Sort by</mat-label>
+      <mat-select formControlName="sort">
+        <mat-option value="alphabetical">Alphabetical</mat-option>
+        <mat-option value="date">Date uploaded</mat-option>
+        <mat-option value="type">Type</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <span class="spacer"></span>
+    <button mat-button (click)="resetAll()">
+      <mat-icon>clear</mat-icon>
+      Clear
+    </button>
+    <button mat-icon-button (click)="changeSortOrder()">
+      <mat-icon>sort</mat-icon>
+    </button>
+  </mat-toolbar>
+</form>
+<mat-list>
+  <mat-list-item *ngFor="let mediaItem of modifiedData">
+    <h4 mat-line>{{ mediaItem.title | uppercase }}</h4>
+    <p mat-line>
+      {{ mediaItem.date | date: "dd MMM yyyy" }} |
+      {{ mediaItem.type }}
+    </p>
+  </mat-list-item>
+</mat-list>
